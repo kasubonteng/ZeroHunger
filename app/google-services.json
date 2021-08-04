@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "934855497632",
+    "project_id": "auth-3bf59",
+    "storage_bucket": "auth-3bf59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934855497632:android:9bd1a708ca1b471a0176c5",
+        "android_client_info": {
+          "package_name": "com.example.zerohunger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934855497632-44507v2juqp5r6tcvtcl3nu16f94roum.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAto5KoEv_j9dSLwJ9syXxHMx_MYdGJE_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934855497632-44507v2juqp5r6tcvtcl3nu16f94roum.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
