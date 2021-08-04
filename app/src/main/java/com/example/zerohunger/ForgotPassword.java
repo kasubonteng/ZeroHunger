@@ -3,6 +3,7 @@ package com.example.zerohunger;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -36,6 +37,13 @@ public class ForgotPassword extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         auth = FirebaseAuth.getInstance();
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ForgotPassword.this, MainActivity.class));
+            }
+        });
 
         resetPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
