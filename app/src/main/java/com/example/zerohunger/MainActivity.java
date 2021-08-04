@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // get elements
         register = (TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
 
@@ -44,11 +45,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
+        // get firebase instance
         mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
     public void onClick(View view) {
+        // define action when clicked
         switch (view.getId()) {
             case R.id.register:
                 startActivity(new Intent(this, RegisterUser.class));
@@ -87,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         progressBar.setVisibility(View.VISIBLE);
 
+        // authenticate user to sign in
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

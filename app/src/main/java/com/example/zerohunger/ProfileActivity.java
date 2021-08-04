@@ -22,6 +22,8 @@ public class ProfileActivity extends AppCompatActivity {
         logout = (Button) findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener(){
 
+            // user sign out
+
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();

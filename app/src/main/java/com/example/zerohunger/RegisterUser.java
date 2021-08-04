@@ -31,17 +31,17 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_user);
 
+        // create firebase instance
         mAuth = FirebaseAuth.getInstance();
 
-        TextView banner = (TextView) findViewById(R.id.banner);
-        banner.setOnClickListener(this);
-
+        // set on click listeners to buttons
         TextView backButton = (TextView) findViewById(R.id.backButton);
         backButton.setOnClickListener(this);
 
         TextView registerUser = (Button) findViewById(R.id.registerUser);
         registerUser.setOnClickListener(this);
 
+        // get elements
         editTextFirstName = (EditText) findViewById(R.id.firstName);
         editTextLastName = (EditText) findViewById(R.id.lastName);
         editTextEmail = (EditText) findViewById(R.id.email);
@@ -52,11 +52,13 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         editTextPhoneNumber = (EditText) findViewById(R.id.phoneNumber);
         editTextHostel = (EditText) findViewById(R.id.hostel);
 
+        // get progress bar
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
     }
 
     @Override
     public void onClick(View view) {
+        // define action when clicked
         switch (view.getId()) {
             case R.id.backButton:
                 startActivity(new Intent(this, MainActivity.class));
@@ -125,6 +127,8 @@ public class RegisterUser extends AppCompatActivity implements View.OnClickListe
         }
 
         progressBar.setVisibility(View.VISIBLE);
+
+        //create user with firebase
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override

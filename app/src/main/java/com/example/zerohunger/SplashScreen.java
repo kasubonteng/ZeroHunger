@@ -15,6 +15,7 @@ public class SplashScreen extends AppCompatActivity {
 
         Handler handler = new Handler();
 
+        // display splash screen
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
