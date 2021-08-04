@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // define action when clicked
         switch (view.getId()) {
             case R.id.register:
-                startActivity(new Intent(this, RegisterUser.class));
+                startActivity(new Intent(this, RegisterUser.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 break;
 
             case R.id.signIn:
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.forgotPassword:
-                startActivity(new Intent(this, ForgotPassword.class));
+                startActivity(new Intent(this, ForgotPassword.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
         }
     }
 
